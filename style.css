@@ -1,128 +1,117 @@
-@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700*display=swap');
 
 *{
+    font-family: 'Nunito', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppins",sans-serif;
-}
-
-html,
-body{
-    height: 100%;
-}
-
-body{
-    background-color: #333f4d;
-    color:#30e5c8 ;
+    border: none;
+    text-decoration:none;
+    text-transform: capitalize;
 }
 
 .container{
-    height: 100%;
-    max-width: 900px;
-    margin: 0 auto;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: 2rem;
-    padding: 1rem 2rem
+    flex-wrap: wrap;
+    padding:20px 7%;
+    background: #0C0D14;
+    min-height: 100vh;
+    gap: 15px;
+    padding-bottom: 80px;
 }
 
-.heading_text{
-    text-align: center;
+.container .content{
+    flex: 1 1 400px;
 }
 
-.heading{
-    font-size: clamp(2.1rem, 7vw, 3rem);
-    line-height: 1.2;
-    /* background-image: linear-gradient(120deg, #1cdce8, #bb77ed);
-    background-size: 200%;
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-    background-clip: text; */
-}
-.head_span{
-    background-color: #30e5c8;
-    padding: 0 0.5rem;
-    border-radius: 30px;
-    color: rgb(238, 237, 237);
+.container .image{
+    flex: 1 1 400px;
 }
 
-.desc{
-    font-size: 0.9rem;
-    color: whitesmoke;
-    max-width: 600px;
-    margin: 1rem auto 0;
-}
-
-.url_shortner_container{
+.container .image img{
     width: 100%;
+}
+
+.container .content .title{
+    font-size: 45px;
+    text-transform: uppercase;
+    color:#3463cc;
+}
+
+.container .content p{
+    color: #98A4D9;
+    padding: 10px 0;
+    line-height: 1.5;
+}
+
+.container .content .count-down{
     display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    gap: 15px;
+    padding: 10px 0;
 }
 
-.input_container{
-    display: grid;
-    grid-template-columns: 15px auto 150px;
-    border: 2px solid #355c4a;
-    padding: 10px;
-    width: 80%;
-    border-radius: 10px;
-    color: white;
-    align-items: center;
-}
-
-.input_container input{
-    outline: none;
-    border: none;
-    background: transparent;
-    color: white;
-    width: 100%;
-    padding:10px ;
-}
-
-.shortBtn{
-    border: none;
-    outline: none;
-    background-color: #30e5c8;
-    /* background: transparent; */
-    /* background-image: linear-gradient(120deg, #333f4d, #30e5c8); */
-    color: white;
-    border-radius: 28px;
-    cursor: pointer;
-    font-weight: 600;
-    padding: 0.7rem 1rem;
-}
-
-.shortBtn:hover{
-    background-color: #479a73;
-}
-
-.result_container{
-    border: 2px solid #355c4a;
-    color: whitesmoke;
-    font-weight: 200;
-    width: 80%;
-    border-radius: 10px;
-    display: flex;
-    padding: 1.2rem;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    font-size: clamp(0.8rem, 4vw, 1rem);
+.container .content .count-down .box{
+    padding: 5px;
+    background: #E9E9EC;
+    border: 1px solid #3333;
+    border-radius: 5px;
     text-align: center;
-    min-height: 50px;
+    flex: 1 1 20px;
 }
 
-@media (max-width:650px){
-    .input_container{
-        grid-template-columns: 15px auto;
+.container .content .count-down .box h3{
+    font-size: 50px;
+    color: #5e5e5e;
+}
+
+.container .content .count-down .box span{
+    color: #3463cc;
+    font-size: 20px;
+}
+
+.container .content .btn{
+    display: inline-block;
+    padding: 8px 50px;
+    margin: 10px 0;
+    font-size: 17px;
+    background: #1C3089;
+    color: #E9E9EC;
+    transition: .2s ease-out;
+    border-radius: 5px;
+}
+
+.container .content .btn:hover{
+    transform: scale(1.05);
+    letter-spacing: 2px;
+}
+
+@media (max-width:500px){
+    .container{
+        padding: 20px;
     }
-    .shortBtn{
-        margin-top: 10px;
-        grid-column: span 2;
+
+    .container .content{
+        text-align: center;
+    }
+
+    .container .content .title{
+        font-size: 35px;
+    }
+
+    .container .content p{
+        font-size: 14px;
+    }
+
+    .container .content .count-down{
+        gap: 5px;
+    }
+
+    .container .content .count-down .box h3{
+        font-size: 30px;
+    }
+
+    .container .content .count-down .box span{
+        font-size: 15px;
     }
 }

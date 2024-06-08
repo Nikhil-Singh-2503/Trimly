@@ -118,6 +118,17 @@ body{
     min-height: 50px;
 }
 
+.footer{
+    text-align: center;
+    color: #fff;
+    background: #0C0D14;
+    padding-bottom: 20px;
+}
+.dev_link{
+    text-decoration: none;
+    color: #1c3089;
+}
+
 @media (max-width:650px){
     .input_container{
         grid-template-columns: 15px auto;

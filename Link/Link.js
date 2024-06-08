@@ -30,12 +30,12 @@ window.addEventListener("DOMContentLoaded",() =>{
     resultEl.innerHTML = "Shortened URL will appear here."
 })
 
-var f = ['🌑', '🌒', '🌓', '🌔', '🌝', '🌖', '🌗', '🌘'];
+// var f = ['🌑', '🌒', '🌓', '🌔', '🌝', '🌖', '🌗', '🌘'];
 
-    function loop() {
-        location.hash = f[Math.floor((Date.now()/100)%f.length)];
+//     function loop() {
+//         location.hash = f[Math.floor((Date.now()/100)%f.length)];
 
-        setTimeout(loop, 50);
-    }
+//         setTimeout(loop, 50);
+//     }
 
-    loop();
+//     loop();
